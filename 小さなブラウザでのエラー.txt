@@ -1,0 +1,137 @@
+$ cargo run -- open examples/sample.html
+   Compiling openssl-sys v0.9.62
+   Compiling stable_deref_trait v1.2.0
+   Compiling pin-utils v0.1.0
+   Compiling futures-sink v0.3.14
+   Compiling hashbrown v0.9.1
+   Compiling native-tls v0.2.7
+   Compiling slab v0.4.3
+   Compiling tinyvec_macros v0.1.0
+   Compiling httparse v1.4.0
+   Compiling futures-io v0.3.14
+   Compiling futures-task v0.3.14
+   Compiling tokio-util v0.6.6
+The following warnings were emitted during compilation:
+
+warning: openssl-sys@0.9.62: build/expando.c:4:24: error: pasting "RUST_VERSION_OPENSSL_" and "(" does not give a valid preprocessing token
+warning: openssl-sys@0.9.62:     4 | #define VERSION2(n, v) RUST_VERSION_##n##_##v
+warning: openssl-sys@0.9.62:       |                        ^~~~~~~~~~~~~
+warning: openssl-sys@0.9.62: build/expando.c:5:23: note: in expansion of macro ‘VERSION2’
+warning: openssl-sys@0.9.62:     5 | #define VERSION(n, v) VERSION2(n, v)
+warning: openssl-sys@0.9.62:       |                       ^~~~~~~~
+warning: openssl-sys@0.9.62: build/expando.c:10:1: note: in expansion of macro ‘VERSION’
+warning: openssl-sys@0.9.62:    10 | VERSION(OPENSSL, OPENSSL_VERSION_NUMBER)
+warning: openssl-sys@0.9.62:       | ^~~~~~~
+
+error: failed to run custom build command for `openssl-sys v0.9.62`
+
+Caused by:
+  process didn't exit successfully: `/home/souchan/Desktop/shbrowser/puppy-browser/target/debug/build/openssl-sys-9b0e76a47f3c2eca/build-script-main` (exit status: 101)
+  --- stdout
+  cargo:rustc-cfg=const_fn
+  cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_GNU_OPENSSL_LIB_DIR
+  X86_64_UNKNOWN_LINUX_GNU_OPENSSL_LIB_DIR unset
+  cargo:rerun-if-env-changed=OPENSSL_LIB_DIR
+  OPENSSL_LIB_DIR unset
+  cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_GNU_OPENSSL_INCLUDE_DIR
+  X86_64_UNKNOWN_LINUX_GNU_OPENSSL_INCLUDE_DIR unset
+  cargo:rerun-if-env-changed=OPENSSL_INCLUDE_DIR
+  OPENSSL_INCLUDE_DIR unset
+  cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_GNU_OPENSSL_DIR
+  X86_64_UNKNOWN_LINUX_GNU_OPENSSL_DIR unset
+  cargo:rerun-if-env-changed=OPENSSL_DIR
+  OPENSSL_DIR unset
+  cargo:rerun-if-env-changed=OPENSSL_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=OPENSSL_STATIC
+  cargo:rerun-if-env-changed=OPENSSL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=SYSROOT
+  cargo:rerun-if-env-changed=OPENSSL_STATIC
+  cargo:rerun-if-env-changed=OPENSSL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rustc-link-lib=ssl
+  cargo:rustc-link-lib=crypto
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=OPENSSL_STATIC
+  cargo:rerun-if-env-changed=OPENSSL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+  OPT_LEVEL = Some("0")
+  TARGET = Some("x86_64-unknown-linux-gnu")
+  HOST = Some("x86_64-unknown-linux-gnu")
+  CC_x86_64-unknown-linux-gnu = None
+  CC_x86_64_unknown_linux_gnu = None
+  HOST_CC = None
+  CC = None
+  CFLAGS_x86_64-unknown-linux-gnu = None
+  CFLAGS_x86_64_unknown_linux_gnu = None
+  HOST_CFLAGS = None
+  CFLAGS = None
+  CRATE_CC_NO_DEFAULTS = None
+  DEBUG = Some("true")
+  CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+  running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "/usr/include" "-Wall" "-Wextra" "-E" "build/expando.c"
+  cargo:warning=build/expando.c:4:24: error: pasting "RUST_VERSION_OPENSSL_" and "(" does not give a valid preprocessing token
+  cargo:warning=    4 | #define VERSION2(n, v) RUST_VERSION_##n##_##v
+  cargo:warning=      |                        ^~~~~~~~~~~~~
+  cargo:warning=build/expando.c:5:23: note: in expansion of macro ‘VERSION2’
+  cargo:warning=    5 | #define VERSION(n, v) VERSION2(n, v)
+  cargo:warning=      |                       ^~~~~~~~
+  cargo:warning=build/expando.c:10:1: note: in expansion of macro ‘VERSION’
+  cargo:warning=   10 | VERSION(OPENSSL, OPENSSL_VERSION_NUMBER)
+  cargo:warning=      | ^~~~~~~
+  exit status: 1
+
+  --- stderr
+  thread 'main' panicked at /home/souchan/.cargo/registry/src/index.crates.io-6f17d22bba15001f/openssl-sys-0.9.62/build/main.rs:147:13:
+
+  Header expansion error:
+  Error { kind: ToolExecError, message: "Command \"cc\" \"-O0\" \"-ffunction-sections\" \"-fdata-sections\" \"-fPIC\" \"-g\" \"-fno-omit-frame-pointer\" \"-m64\" \"-I\" \"/usr/include\" \"-Wall\" \"-Wextra\" \"-E\" \"build/expando.c\" with args \"cc\" did not execute successfully (status code exit status: 1)." }
+
+  Failed to find OpenSSL development headers.
+
+  You can try fixing this setting the `OPENSSL_DIR` environment variable
+  pointing to your OpenSSL installation or installing OpenSSL headers package
+  specific to your distribution:
+
+      # On Ubuntu
+      sudo apt-get install libssl-dev
+      # On Arch Linux
+      sudo pacman -S openssl
+      # On Fedora
+      sudo dnf install openssl-devel
+
+  See rust-openssl README for more information:
+
+      https://github.com/sfackler/rust-openssl#linux
+
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
